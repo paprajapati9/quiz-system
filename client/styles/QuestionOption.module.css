@@ -1,0 +1,42 @@
+.basic {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  color: var(--teal12);
+  font-size: 1.2rem;
+  width: fit-content;
+  cursor: pointer;
+  position: relative;
+}
+
+.basic > input {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.basic > input:enabled:hover + span,
+.basic > input:focus + span {
+  outline-offset: 2px;
+  outline: 4px solid hsl(173 80.2% 23.7%);
+}
+
+.basic > input:disabled:hover {
+  cursor: not-allowed;
+}
+
+.basic > input:checked + span {
+  background-color: hsl(173 80% 36%);
+  color: hsl(168 48% 6.5%);
+}
+
+@media only screen and (max-width: 720px) {
+  .basic {
+    font-size: 0.95rem;
+  }
+}
